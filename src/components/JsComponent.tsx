@@ -93,6 +93,10 @@ const Wrapper = styled.div`
       fill: blue;
     }
 
+    & > circle:nth-of-type(1) {
+      fill: rgb(152, 56, 56);
+    }
+
     & > .face__eye:nth-of-type(2) {
       transform-origin: 175px 380.5px;
     }
