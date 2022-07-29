@@ -6,7 +6,10 @@
 // import StraightComponent from "./components/StraightComponent";
 // import PathComponent from "./components/PathComponent";
 // import StrokeComponent from "./components/StrokeComponent";
-import GroupingComponent from "./components/GroupingComponent";
+// import GroupingComponent from "./components/GroupingComponent";
+// import TextComponent from "./components/TextComponent";
+// import CurvedTextComponent from "./components/CurvedTextComponent";
+import TextStylingComponent from "./components/TextStylingComponent";
 
 function App() {
   // 1. HTML에 SVG를 삽입하는 방법
@@ -24,7 +27,12 @@ function App() {
   // return <StraightComponent />;
   // return <PathComponent />;
   // return <StrokeComponent />;
-  return <GroupingComponent />;
+  // return <GroupingComponent />;
+
+  // 5. 텍스트 - 기본 글자 쓰기, 곡선 따라 쓰기, 텍스트 부분 스타일링 적용하기
+  // return <TextComponent />;
+  // return <CurvedTextComponent />;
+  return <TextStylingComponent />;
 }
 
 export default App;
