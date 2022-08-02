@@ -12,8 +12,9 @@
 // import TextStylingComponent from "./components/TextStylingComponent";
 // import GradientComponent from "./components/GradientComponent";
 // import PatternComponent from "./components/PatternComponent";
-
-import AnimationedPatternComponent from "./components/AnimationedPatternComponent";
+// import AnimationedPatternComponent from "./components/AnimationedPatternComponent";
+// import MaskComponent from "./components/MaskComponent";
+import MagnifyComponent from "./components/MagnifyComponent";
 
 function App() {
   // 1. HTML에 SVG를 삽입하는 방법
@@ -36,7 +37,9 @@ function App() {
   // 6. Gradient
   // return <GradientComponent />;
   // return <PatternComponent />;
-  return <AnimationedPatternComponent />;
+  // return <AnimationedPatternComponent />;
+  // return <MaskComponent />;
+  return <MagnifyComponent />;
 }
 
 export default App;
