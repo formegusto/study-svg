@@ -1,6 +1,21 @@
-import styled from "styled-components";
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
 function MagnifyComponent() {
+  const refMagnifier = React.useRef<SVGPathElement>(null);
+  const refMask = React.useRef<SVGCircleElement>(null);
+
+  React.useEffect(() => {
+    // window.addEventListener("DOMContentLoaded") => Tag 구조들의 완성
+
+    window.addEventListener("mousemove", (e) => {
+      if (refMagnifier.current && refMask.current) {
+        refMagnifier.current.style.transform = `translate(${e.clientX}px,${e.clientY}px)`;
+        refMask.current.style.transform = `translate(${e.clientX}px,${e.clientY}px)`;
+      }
+    });
+  }, []);
+
   return (
     <Wrapper>
       <svg xmlns="http://www.w3.org/2000/svg" className="the-svg">
@@ -12,7 +27,7 @@ function MagnifyComponent() {
             />
             <g>
               <circle cx="19.31" cy="41.98" r="4.69" />
-              <circle cx="43.8" cy="41.98" r="4.69" />
+              <circle className="left-eye" cx="43.8" cy="41.98" r="4.69" />
             </g>
             <path
               d="M138.61,124.88h-.05a21.76,21.76,0,0,1-16.19-7.24l2.47-2.21a18.44,18.44,0,0,0,13.72,6.14h.05a18.44,18.44,0,0,0,13.72-6.14l2.46,2.21A21.73,21.73,0,0,1,138.61,124.88Z"
@@ -24,11 +39,13 @@ function MagnifyComponent() {
             />
           </pattern>
           <mask id="mask-glass">
-            <circle cx="80.51" cy="80.51" r="60" fill="#ff7745" />
+            <circle ref={refMask} cx="80.51" cy="80.51" r="60" fill="#fff" />
           </mask>
         </defs>
+        {/* mask 는 흰색에 가까울수록 투명, 검은색에 가까울수록 어두워짐 */}
 
         <path
+          ref={refMagnifier}
           d="M150.81 41.26a80.5 80.5 0 1 0-41.94 114.6l36.28 64.95a12 12 0 1 0 20.95-11.7l-36.29-64.95a80.51 80.51 0 0 0 21-102.9zm-41 91.63a60 60 0 1 1 23.12-81.64 60 60 0 0 1-23.12 81.64z"
           fill="#ce0000"
         />
@@ -39,6 +56,14 @@ function MagnifyComponent() {
     </Wrapper>
   );
 }
+
+const AniEye = keyframes`
+  to {
+    transform: scaleY(0.2);
+  } from {
+    transform: scaleY(1);
+  }
+`;
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -58,6 +83,11 @@ const Wrapper = styled.div`
 
     & .bg {
       fill: url(#pattern-bg);
+    }
+
+    .left-eye {
+      animation: ${AniEye} 1s linear alternate infinite;
+      transform-origin: 43.8px 41.98px;
     }
   }
 `;
