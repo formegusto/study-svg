@@ -37,7 +37,8 @@ const Wrapper = styled.div`
   circle {
     stroke: black;
     stroke-width: 5;
-    stroke-dasharray: 700;
+    stroke-dasharray: 350;
+    /* stroke-dashoffset: 10; */
     fill: transparent;
 
     animation: ${dashAni} 1s linear infinite alternate;
