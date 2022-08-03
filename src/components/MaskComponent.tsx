@@ -39,6 +39,7 @@ const Wrapper = styled.div`
     background: #ddd;
 
     & text {
+      mask: url(#mask-circle);
       font-size: 5rem;
     }
   }

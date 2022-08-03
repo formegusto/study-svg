@@ -14,7 +14,9 @@
 // import PatternComponent from "./components/PatternComponent";
 // import AnimationedPatternComponent from "./components/AnimationedPatternComponent";
 // import MaskComponent from "./components/MaskComponent";
-import MagnifyComponent from "./components/MagnifyComponent";
+// import MagnifyComponent from "./components/MagnifyComponent";
+// import AniStrokeComponent from "./components/AniStrokeComponent";
+import AniStroke2Component from "./components/AniStroke2Component";
 
 function App() {
   // 1. HTML에 SVG를 삽입하는 방법
@@ -39,7 +41,11 @@ function App() {
   // return <PatternComponent />;
   // return <AnimationedPatternComponent />;
   // return <MaskComponent />;
-  return <MagnifyComponent />;
+  // return <MagnifyComponent />;
+
+  // 7. Stroke Animation
+  // return <AniStrokeComponent />;
+  return <AniStroke2Component />;
 }
 
 export default App;
