@@ -16,7 +16,12 @@
 // import MaskComponent from "./components/MaskComponent";
 // import MagnifyComponent from "./components/MagnifyComponent";
 // import AniStrokeComponent from "./components/AniStrokeComponent";
-import AniStroke2Component from "./components/AniStroke2Component";
+// import AniStroke2Component from "./components/AniStroke2Component";
+// import SMILComponent from "./components/SMILComponent";
+// import SMILInteractionComponent from "./components/SMILIteractionComponent";
+// import MorphingComponent from "./components/MorphingComponent";
+
+import AlternateComponent from "./components/AlternateComponent";
 
 function App() {
   // 1. HTML에 SVG를 삽입하는 방법
@@ -45,7 +50,13 @@ function App() {
 
   // 7. Stroke Animation
   // return <AniStrokeComponent />;
-  return <AniStroke2Component />;
+  // return <AniStroke2Component />;
+
+  // 8. SMIL (Synchronized Multimedia Integration Language)
+  // return <SMILComponent />;
+  // return <SMILInteractionComponent />;
+  // return <MorphingComponent />;
+  return <AlternateComponent />;
 }
 
 export default App;
