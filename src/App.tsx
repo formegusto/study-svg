@@ -20,8 +20,8 @@
 // import SMILComponent from "./components/SMILComponent";
 // import SMILInteractionComponent from "./components/SMILIteractionComponent";
 // import MorphingComponent from "./components/MorphingComponent";
-
-import AlternateComponent from "./components/AlternateComponent";
+// import AlternateComponent from "./components/AlternateComponent";
+import FontSetComponent from "./components/FontSetComponent";
 
 function App() {
   // 1. HTML에 SVG를 삽입하는 방법
@@ -56,7 +56,10 @@ function App() {
   // return <SMILComponent />;
   // return <SMILInteractionComponent />;
   // return <MorphingComponent />;
-  return <AlternateComponent />;
+  // return <AlternateComponent />;
+
+  // 9. FontSet
+  return <FontSetComponent />;
 }
 
 export default App;
